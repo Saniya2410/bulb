@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb On Off</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin-top: 50px;
+        }
+        img {
+            width: 150px;
+            height: auto;
+            transition: 0.3s ease-in-out;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .on-button {
+            background-color: #28a745;
+            color: white;
+        }
+        .on-button:hover {
+            background-color: #218838;
+        }
+        .off-button {
+            background-color: #dc3545;
+            color: white;
+        }
+        .off-button:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <h1>switch on and off the Bulb</h1>
+    <img src="turn-off.png" alt="Bulb is Off" id="bulb">
+    <div class="button-container">
+        <button class="on-button" onclick="bulbOn()">Turn On</button>
+        <button class="off-button" onclick="bulbOff()">Turn Off</button>
+    </div>
+    <script>
+        const bulbElement = document.getElementById('bulb');
+        function bulbOn() {
+            bulbElement.src = "turn-on.png";
+            bulbElement.alt = "Bulb is On";
+        }
+        function bulbOff() {
+            bulbElement.src = "turn-off.png";
+            bulbElement.alt = "Bulb is Off";
+        }
+    </script>
+</body>
+</html>
